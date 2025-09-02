@@ -15,16 +15,23 @@ As the world faces serious environmental challenges, I feel motivated to be part
 Education
 ------
 Bachelor of Science in Oceanography
+
 Shahjalal University of Science & Technology (SUST), Bangladesh
+
 Passing Year: 2024 | CGPA: 3.29 / 4.00
+
 Department of Oceanography
 
 Higher Secondary Certificate (HSC)
+
 Ideal College, Dhanmondi, Dhaka
+
 Passing Year: 2017 | GPA: 4.92 / 5.00
 
 Secondary School Certificate (SSC)
+
 Lakers' Public School, Rangamati
+
 Passing Year: 2015 | GPA: 4.89 / 5.00
 
 Getting started
