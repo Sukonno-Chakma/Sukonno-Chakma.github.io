@@ -14,10 +14,10 @@ As the world faces serious environmental challenges, I feel motivated to be part
 
 ## Research Interests
 
-◦ Remote Sensing
-◦ Geospatial analysis
-◦ Environmental hazards mapping
-◦ GIS applications in disaster risk management
+- Remote Sensing
+- Geospatial analysis
+- Environmental hazards mapping
+- GIS applications in disaster risk management
 
 ## Education
 
