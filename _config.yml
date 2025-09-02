@@ -22,7 +22,7 @@ repository               : "Sukonno-Chakma/Sukonno-Chakma.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Picture.png"
+  avatar           : "Picture.jpg"
   name             : "Sukonno Chakma"
   location         : "Rangamati, Bangladesh."
   uri              : "https://sukonno-chakma.github.io"
