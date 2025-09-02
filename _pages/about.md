@@ -13,6 +13,7 @@ I graduated with a bachelor’s degree in Oceanography from Shahjalal University
 As the world faces serious environmental challenges, I feel motivated to be part of the solution. I’m especially interested in learning more about building models and using remote sensing techniques to better understand what’s happening around us. My goal is to turn that knowledge into something useful that can actually help protect our planet. 
 
 Education
+------
 Bachelor of Science in Oceanography
 Shahjalal University of Science & Technology (SUST), Bangladesh
 Passing Year: 2024 | CGPA: 3.29 / 4.00
