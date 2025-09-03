@@ -176,9 +176,9 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  publications:
+  projects:
     output: true
-    permalink: /:collection/:path/
+    permalink: /projects/:path/
   portfolio:
     output: true
     permalink: /:collection/:path/
