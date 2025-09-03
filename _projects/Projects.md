@@ -19,7 +19,7 @@ author_profile: true
   </div>
 
   <div class="project__content" markdown="1">
-  ## Project 1: Chlorophyll Change in the Arabian Sea
+  **Project 1: Chlorophyll Change in the Arabian Sea**
   **Title:** Inspection of Short-term Chlorophyll Change in the Arabian Sea  
   **Type:** Research Project (Remote Sensing & Oceanography Lab)
 
@@ -46,7 +46,7 @@ author_profile: true
   </div>
 
   <div class="project__content" markdown="1">
-  ## Project 2: Tropical Cyclone Vulnerability in Bangladesh
+  **Project 2: Tropical Cyclone Vulnerability in Bangladesh**
   **Title:** Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh  
   **Type:** B.Sc. Research Project
 
