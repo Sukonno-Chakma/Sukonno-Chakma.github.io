@@ -19,8 +19,8 @@ author_profile: true
   </div>
 
   <div class="project__content" markdown="1">
-  **Project 1: Chlorophyll Change in the Arabian Sea**
-  **Title:** Inspection of Short-term Chlorophyll Change in the Arabian Sea  
+  **Project 1 (Group): Inspection of short-term Chlorophyll Change in the Arabian Sea: A spaceborne
+assessment of Tropical Cyclone Impacts**  
   **Type:** Research Project (Remote Sensing & Oceanography Lab)
 
   - Nine out of ten cyclones showed increased chlorophyll concentration, with pre-monsoon cyclones producing stronger enhancements.
@@ -46,8 +46,7 @@ author_profile: true
   </div>
 
   <div class="project__content" markdown="1">
-  **Project 2: Tropical Cyclone Vulnerability in Bangladesh**
-  **Title:** Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh  
+  **Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh** 
   **Type:** B.Sc. Research Project
 
   - Vulnerability mapping used 11 spatial criteria, covering elevation, slope, land use, population density, literacy, and access to shelters/roads.
