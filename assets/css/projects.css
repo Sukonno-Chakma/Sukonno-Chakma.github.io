@@ -14,7 +14,9 @@
 }
 
 @media (min-width: 900px) {
-  .project { grid-template-columns: 1fr 1fr; }   /* left slider, right text */
+  .project {
+    grid-template-columns: 0.9fr 1.3fr; /* about 40% slider / 60% content */
+  }
 }
 
 /* ---------- Uniform slider size WITHOUT cropping ---------- */
@@ -23,7 +25,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  height: clamp(220px, 28vw, 360px);             /* same visual size everywhere */
+  height: clamp(260px, 34vw, 440px);             /* same visual size everywhere */
   background: #fafafa;                           /* light backdrop behind images */
   border: 1px solid rgba(0,0,0,0.06);
 }
