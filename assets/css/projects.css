@@ -34,3 +34,21 @@
   background: rgba(255,255,255,0.6); cursor: pointer;
 }
 .carousel__dots button[aria-current="true"] { background: #fff; }
+/* Keep the slider box consistent */
+.carousel__slide {
+  min-width: 100%;
+  aspect-ratio: 16 / 9;   /* or 4/3 if you prefer taller */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;   /* fallback background */
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills frame, keeps quality */
+  border-radius: 8px;
+}
+
