@@ -9,7 +9,7 @@
 
 main:
   - title: "Projects"
-    url: _pages/Projects.md
+    url: /projects/
 
   - title: "Experiances"
     url: /Experiances/    
