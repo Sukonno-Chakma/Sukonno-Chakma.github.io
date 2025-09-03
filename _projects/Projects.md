@@ -5,6 +5,7 @@ permalink: /projects/
 collection: projects
 author_profile: true
 ---
+<div class="project__content">
 ## Project 1: Chlorophyll Change in the Arabian Sea
 **Title:** Inspection of Short-term Chlorophyll Change in the Arabian Sea  
 **Type:** Research Project (Remote Sensing & Oceanography Lab)   
@@ -16,19 +17,22 @@ author_profile: true
 - Translation speed showed a moderate negative correlation (r = –0.41), meaning slower cyclones drive greater chlorophyll blooms.
 
 - Exceptional cases (like Hikaa and Luban) suggest other environmental or data-related factors also play roles.
-
-<div style="max-width:600px; margin:auto;">
-  <div id="carousel1" class="carousel" style="overflow:hidden; position:relative;">
-    <img src="images/project1.jpeg" width="100%" />
-    <img src="images/project2.jpeg" width="100%" />
-    <img src="images/project3.png" width="100%" />
-    <img src="images/project4.png" width="100%" />
-    <img src="images/project5.png" width="100%" />
   </div>
 </div>
 
----
+<div class="project">
+  <div class="project__images">
+    <div id="carousel1" class="carousel">
+      <img src="images/project1.jpeg" />
+      <img src="images/project2.jpeg" />
+      <img src="images/project3.png" />
+      <img src="images/project4.png" />
+      <img src="images/project5.png" />
+    </div>
+  </div>
 
+---
+<div class="project__content">
 ## Project 2: Tropical Cyclone Vulnerability in Bangladesh
 **Title:** Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh  
 **Type:** B.Sc. Research Project    
@@ -40,8 +44,12 @@ author_profile: true
 - Social vulnerability is highest where population density is high and literacy is low, compounding risks for women and disabled populations.
 
 - Mitigation capacity (shelters, healthcare, road networks) reduces risk in some regions, but gaps remain that require urgent infrastructure and community interventions.
-<div style="max-width:600px; margin:auto;">
-  <div id="carousel2" class="carousel" style="overflow:hidden; position:relative;">
+  </div>
+</div>
+
+<div class="project">
+  <div class="project__images">
+    <div id="carousel1" class="carousel">
     <img src="images/p1.png" width="100%" />
      <img src="images/p2.png" width="100%" />
      <img src="images/p3.png" width="100%" />
