@@ -1,4 +1,4 @@
-/* two-column project row */
+/* two-column layout */
 .project {
   display: grid;
   gap: 1.5rem;
@@ -6,65 +6,31 @@
   margin-bottom: 2rem;
 }
 @media (min-width: 900px) {
-  .project {
-    grid-template-columns: 1fr 1fr; /* left images, right bullets */
-  }
+  .project { grid-template-columns: 1fr 1fr; }
 }
 .project__images img { width: 100%; height: auto; border-radius: 8px; }
 
-/* slider */
-.carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-.carousel__track {
-  display: flex;
-  transition: transform 450ms ease;
-}
-.carousel__slide {
-  min-width: 100%;
-  aspect-ratio: 16/9; /* tweak as needed */
-}
-.carousel__slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+/* slider chrome */
+.carousel { position: relative; overflow: hidden; border-radius: 12px; }
+.carousel__track { display: flex; transition: transform 450ms ease; }
+.carousel__slide { min-width: 100%; aspect-ratio: 16/9; }
+.carousel__slide img { width: 100%; height: 100%; object-fit: cover; }
 
-/* arrows */
 .carousel__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  font-size: 1.5rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 8px;
-  cursor: pointer;
+  position: absolute; top: 50%; transform: translateY(-50%);
+  border: 0; background: rgba(0,0,0,0.55); color: #fff;
+  width: 2.4rem; height: 2.4rem; border-radius: 8px; cursor: pointer;
+  font-size: 1.4rem;
 }
 .carousel__btn--prev { left: .5rem; }
 .carousel__btn--next { right: .5rem; }
 
-/* dots */
 .carousel__dots {
-  position: absolute;
-  left: 50%;
-  bottom: .5rem;
-  transform: translateX(-50%);
-  display: flex;
-  gap: .4rem;
+  position: absolute; left: 50%; bottom: .5rem; transform: translateX(-50%);
+  display: flex; gap: .4rem;
 }
 .carousel__dots button {
-  width: .55rem;
-  height: .55rem;
-  border: none;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.6);
-  cursor: pointer;
+  width: .55rem; height: .55rem; border-radius: 999px; border: 0;
+  background: rgba(255,255,255,0.6); cursor: pointer;
 }
 .carousel__dots button[aria-current="true"] { background: #fff; }
-
