@@ -74,3 +74,8 @@
 .project__content h3 { margin: 0 0 .4rem; }
 .project__content p { margin: 0 0 .5rem; }
 .project__content ul { margin: .3rem 0 0 1rem; }
+.project__content {
+  font-size: 1rem;    /* or 1.05rem if you want slightly bigger text */
+  line-height: 1.55;  /* improves readability */
+}
+
