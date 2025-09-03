@@ -46,7 +46,7 @@ assessment of Tropical Cyclone Impacts**
   </div>
 
   <div class="project__content" markdown="1">
-  **Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh** 
+  **Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh** </br>
   **Type:** B.Sc. Research Project
 
   - Vulnerability mapping used 11 spatial criteria, covering elevation, slope, land use, population density, literacy, and access to shelters/roads.
