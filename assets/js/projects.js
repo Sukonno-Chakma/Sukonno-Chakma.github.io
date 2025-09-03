@@ -1,14 +1,10 @@
-<script>
 (function () {
   function makeSlider(root, { autoplayMs = 3000 } = {}) {
-    // gather images
     const imgs = Array.from(root.querySelectorAll(":scope > img"));
-    if (imgs.length <= 1) return; // nothing to slide
+    if (imgs.length <= 1) return;
 
-    // build structure: track + slides
     const track = document.createElement("div");
     track.className = "carousel__track";
-
     imgs.forEach(img => {
       const slide = document.createElement("div");
       slide.className = "carousel__slide";
@@ -17,7 +13,6 @@
     });
     root.appendChild(track);
 
-    // arrows
     const prev = document.createElement("button");
     prev.className = "carousel__btn carousel__btn--prev";
     prev.type = "button";
@@ -30,10 +25,6 @@
     next.setAttribute("aria-label", "Next slide");
     next.textContent = "›";
 
-    root.appendChild(prev);
-    root.appendChild(next);
-
-    // dots
     const dots = document.createElement("div");
     dots.className = "carousel__dots";
     const dotBtns = imgs.map((_, i) => {
@@ -43,32 +34,22 @@
       dots.appendChild(b);
       return b;
     });
+
+    root.appendChild(prev);
+    root.appendChild(next);
     root.appendChild(dots);
 
-    // state
-    let index = 0;
-    let timer = null;
+    let index = 0, timer = null;
     const count = imgs.length;
 
     function go(i) {
       index = (i + count) % count;
       track.style.transform = `translateX(-${index * 100}%)`;
-      dotBtns.forEach((b, j) => {
-        if (j === index) b.setAttribute("aria-current", "true");
-        else b.removeAttribute("aria-current");
-      });
+      dotBtns.forEach((b, j) => j === index ? b.setAttribute("aria-current","true") : b.removeAttribute("aria-current"));
     }
+    function startAuto() { stopAuto(); timer = setInterval(() => go(index + 1), autoplayMs); }
+    function stopAuto()  { if (timer) clearInterval(timer); timer = null; }
 
-    function startAuto() {
-      stopAuto();
-      timer = setInterval(() => go(index + 1), autoplayMs);
-    }
-    function stopAuto() {
-      if (timer) clearInterval(timer);
-      timer = null;
-    }
-
-    // events
     prev.addEventListener("click", () => { go(index - 1); startAuto(); });
     next.addEventListener("click", () => { go(index + 1); startAuto(); });
     dotBtns.forEach((b, i) => b.addEventListener("click", () => { go(i); startAuto(); }));
@@ -82,16 +63,16 @@
       const dx = e.clientX - startX;
       if (Math.abs(dx) > 40) {
         dragging = false;
-        if (dx < 0) go(index + 1); else go(index - 1);
+        dx < 0 ? go(index + 1) : go(index - 1);
       }
     });
 
-    // init
     go(0);
     startAuto();
   }
 
-  // initialize every .carousel independently
-  document.querySelectorAll(".carousel").forEach(el => makeSlider(el, { autoplayMs: 3000 }));
+  // safer to wait until the DOM is ready
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".carousel").forEach(el => makeSlider(el, { autoplayMs: 3000 }));
+  });
 })();
-</script>
