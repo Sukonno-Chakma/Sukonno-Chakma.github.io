@@ -15,7 +15,7 @@
 
 @media (min-width: 900px) {
   .project {
-    grid-template-columns: 0.9fr 1.3fr; /* about 40% slider / 60% content */
+    grid-template-columns: 0.9fr 1.6fr; /* about 40% slider / 60% content */
   }
 }
 
@@ -75,7 +75,9 @@
 .project__content p { margin: 0 0 .5rem; }
 .project__content ul { margin: .3rem 0 0 1rem; }
 .project__content {
-  font-size: 1rem;    /* or 1.05rem if you want slightly bigger text */
-  line-height: 1.55;  /* improves readability */
+  font-size: 1rem;       /* or 1.05rem */
+  line-height: 1.6;      /* better paragraph flow */
+  max-width: 65ch;       /* keeps text lines comfortable length */
 }
+
 
