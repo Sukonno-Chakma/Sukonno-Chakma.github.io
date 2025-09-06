@@ -19,7 +19,7 @@ author_profile: true
   </article>
 
   <article class="field-card">
-    <img class="thumb" src="{{ '/images/f_1.gif' | relative_url }}" alt="Kuakata lab and CTD">
+    <img class="thumb" src="{{ '/images/f_2.gif' | relative_url }}" alt="Kuakata lab and CTD">
     <div class="details" markdown="1">
       ### Kuakata Field Trip
       <div class="eyebrow">Field Work | 2022</div>
@@ -31,7 +31,7 @@ author_profile: true
   </article>
 
   <article class="field-card">
-    <img class="thumb" src="{{ '/images/f_2.gif' | relative_url }}" alt="Sundarbans mangrove transects">
+    <img class="thumb" src="{{ '/images/f_1.gif' | relative_url }}" alt="Sundarbans mangrove transects">
     <div class="details" markdown="1">
       ### Sundarbans Mangrove Forest
       <div class="eyebrow">Field Work | 2020</div>
@@ -43,7 +43,7 @@ author_profile: true
     </div>
   </article>
   <article class="field-card">
-    <img class="thumb" src="{{ '/images/f_3.gif' | relative_url }}" alt="Cox's Bazar & St. Martin's Island">
+    <img class="thumb" src="{{ '/images/f_0.gif' | relative_url }}" alt="Cox's Bazar & St. Martin's Island">
     <div class="details" markdown="1">
       ### Cox's Bazar & St. Martin's Island
       <div class="eyebrow">Field Work | 2019</div>
