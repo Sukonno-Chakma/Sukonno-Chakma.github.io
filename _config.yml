@@ -179,12 +179,12 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-  Experiances:
+  experiances:
     output: true
     permalink: /experiances/:path/
-  Beyond academics:
+  academics:
     output: true
-    permalink: /Beyond academics/:path/
+    permalink: /academics/:path/
 
 
 # These settings control how pages and collections are included in the site
