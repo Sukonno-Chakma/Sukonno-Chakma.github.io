@@ -176,5 +176,15 @@
   .carousel__dots button { background: var(--dot-inactive) !important; }
   .carousel__dots button[aria-current="true"] { background: var(--dot-active) !important; }
 }
-
+.carousel__btn::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: currentColor;
+  display: block;
+  /* Chevron-right path (we flip for prev) */
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 6l6 6-6 6'/></svg>") center / contain no-repeat;
+          mask: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M9 6l6 6-6 6%22/></svg>') center / contain no-repeat;
+}
+.carousel__btn--prev::before { transform: scaleX(-1); }  /* flip to left */
 
