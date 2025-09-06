@@ -4,7 +4,7 @@ permalink: /experiances/
 layout: single
 author_profile: true
 ---
-<link rel="stylesheet" href="/assets/css/experiances.css"> 
+<link rel="stylesheet" href="{{ '/assets/css/experiances.css' | relative_url }}">
 <div class="project-wrap">
  
 # Assessment of Water Quality Parameters and Their Impact on Tilapia Production in Aquaculture Ponds
@@ -34,18 +34,19 @@ author_profile: true
 
 ---
 <div class="report-images">
-  <img src="images/I1.png" alt="" />
-  <img src="images/I2.png" alt="" />
-  <img src="images/I3.png" alt="" />
-  <img src="images/I4.png" alt="" />
-  <img src="images/I5.png" alt="" />
-  <img src="images/I6.png" alt="" />
-  <img src="images/I7.png" alt="" />
-  <img src="images/I8.png" alt="" />
-  <img src="images/I9.png" alt="" />
-  <img src="images/I10.png" alt="" />
-  <img src="images/I11.png" alt="" />
+  <img src="{{ '/images/I1.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I2.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I3.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I4.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I5.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I6.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I7.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I8.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I9.png'  | relative_url }}" alt="">
+  <img src="{{ '/images/I10.png' | relative_url }}" alt="">
+  <img src="{{ '/images/I11.png' | relative_url }}" alt="">
 </div>
 
+
 </div>
-<script> src="/assets/js/experiances.js" </script>
+<script src="{{ '/assets/js/experiances.js' | relative_url }}"></script>
