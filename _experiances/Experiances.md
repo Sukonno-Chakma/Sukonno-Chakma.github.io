@@ -4,6 +4,7 @@ permalink: /experiances/
 layout: single
 author_profile: true
 ---
+<link rel="stylesheet" href="/assets/css/experiances.css"> 
 <div class="project-wrap">
  
 # Assessment of Water Quality Parameters and Their Impact on Tilapia Production in Aquaculture Ponds
@@ -47,3 +48,4 @@ author_profile: true
 </div>
 
 </div>
+<script> src="/assets/js/experiances.js" </script>
