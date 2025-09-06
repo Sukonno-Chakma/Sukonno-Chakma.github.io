@@ -1,78 +1,122 @@
-(function () {
-  function makeSlider(root, { autoplayMs = 3000 } = {}) {
-    const imgs = Array.from(root.querySelectorAll(":scope > img"));
-    if (imgs.length <= 1) return;
+// /assets/js/projects.js
+(function makeReportImagesSlider() {
+  const container = document.querySelector('.report-images');
+  if (!container) return;
 
-    const track = document.createElement("div");
-    track.className = "carousel__track";
-    imgs.forEach(img => {
-      const slide = document.createElement("div");
-      slide.className = "carousel__slide";
-      slide.appendChild(img);
-      track.appendChild(slide);
-    });
-    root.appendChild(track);
+  // 1) Collect existing <img> tags
+  const imgs = Array.from(container.querySelectorAll('img'));
+  if (!imgs.length) return;
 
-    const prev = document.createElement("button");
-    prev.className = "carousel__btn carousel__btn--prev";
-    prev.type = "button";
-    prev.setAttribute("aria-label", "Previous slide");
-    prev.textContent = "‹";
+  // 2) Build DOM: track, slides, controls, dots
+  const track = document.createElement('div');
+  track.className = 'slider-track';
 
-    const next = document.createElement("button");
-    next.className = "carousel__btn carousel__btn--next";
-    next.type = "button";
-    next.setAttribute("aria-label", "Next slide");
-    next.textContent = "›";
+  const slides = imgs.map((img) => {
+    const slide = document.createElement('div');
+    slide.className = 'slide';
+    slide.appendChild(img); // move existing <img> inside slide
+    return slide;
+  });
 
-    const dots = document.createElement("div");
-    dots.className = "carousel__dots";
-    const dotBtns = imgs.map((_, i) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.setAttribute("aria-label", "Go to slide " + (i + 1));
-      dots.appendChild(b);
-      return b;
-    });
+  slides.forEach(s => track.appendChild(s));
 
-    root.appendChild(prev);
-    root.appendChild(next);
-    root.appendChild(dots);
+  // Controls
+  const mkBtn = (cls, pathD) => {
+    const btn = document.createElement('button');
+    btn.className = `ctrl ${cls}`;
+    btn.setAttribute('aria-label', cls === 'prev' ? 'Previous slide' : 'Next slide');
+    btn.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="${pathD}"/>
+      </svg>`;
+    return btn;
+  };
+  const prevBtn = mkBtn('prev', 'M15 18l-6-6 6-6'); // chevron-left
+  const nextBtn = mkBtn('next', 'M9 6l6 6-6 6');   // chevron-right
 
-    let index = 0, timer = null;
-    const count = imgs.length;
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'dots';
 
-    function go(i) {
-      index = (i + count) % count;
-      track.style.transform = `translateX(-${index * 100}%)`;
-      dotBtns.forEach((b, j) => j === index ? b.setAttribute("aria-current","true") : b.removeAttribute("aria-current"));
-    }
-    function startAuto() { stopAuto(); timer = setInterval(() => go(index + 1), autoplayMs); }
-    function stopAuto()  { if (timer) clearInterval(timer); timer = null; }
+  // 3) Mount new structure
+  container.innerHTML = '';
+  container.appendChild(track);
+  container.appendChild(prevBtn);
+  container.appendChild(nextBtn);
+  container.appendChild(dotsWrap);
 
-    prev.addEventListener("click", () => { go(index - 1); startAuto(); });
-    next.addEventListener("click", () => { go(index + 1); startAuto(); });
-    dotBtns.forEach((b, i) => b.addEventListener("click", () => { go(i); startAuto(); }));
+  // 4) Slider logic
+  let index = 0;
+  let isAnimating = false;
 
-    // swipe
-    let startX = 0, dragging = false;
-    track.addEventListener("pointerdown", (e) => { dragging = true; startX = e.clientX; stopAuto(); });
-    window.addEventListener("pointerup", () => { if (dragging) { dragging = false; startAuto(); } });
-    track.addEventListener("pointermove", (e) => {
-      if (!dragging) return;
-      const dx = e.clientX - startX;
-      if (Math.abs(dx) > 40) {
-        dragging = false;
-        dx < 0 ? go(index + 1) : go(index - 1);
-      }
-    });
-
-    go(0);
-    startAuto();
+  function goTo(n, opts = { behavior: 'smooth' }) {
+    index = (n + slides.length) % slides.length;
+    const targetLeft = slides[index].offsetLeft;
+    isAnimating = true;
+    track.scrollTo({ left: targetLeft, behavior: opts.behavior });
+    updateDots();
+    setTimeout(() => (isAnimating = false), 400);
   }
 
-  // safer to wait until the DOM is ready
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".carousel").forEach(el => makeSlider(el, { autoplayMs: 3000 }));
+  function updateDots() {
+    dotsWrap.innerHTML = '';
+    slides.forEach((_, i) => {
+      const d = document.createElement('span');
+      d.className = 'dot' + (i === index ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    });
+  }
+
+  function next() { if (!isAnimating) goTo(index + 1); }
+  function prev() { if (!isAnimating) goTo(index - 1); }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  // Keyboard
+  container.tabIndex = 0;
+  container.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft') prev();
   });
+
+  // Resize alignment
+  window.addEventListener('resize', () => goTo(index, { behavior: 'auto' }));
+
+  // Touch/drag support
+  let startX = 0, dx = 0, dragging = false;
+
+  function onStart(clientX) { dragging = true; startX = clientX; dx = 0; }
+  function onMove(clientX) { if (!dragging) return; dx = clientX - startX; }
+  function onEnd() {
+    if (!dragging) return;
+    dragging = false;
+    const threshold = Math.max(50, container.clientWidth * 0.08);
+    if (dx > threshold) prev();
+    else if (dx < -threshold) next();
+    else goTo(index);
+  }
+
+  track.addEventListener('pointerdown', (e) => { onStart(e.clientX); track.setPointerCapture(e.pointerId); });
+  track.addEventListener('pointermove',  (e) => onMove(e.clientX));
+  track.addEventListener('pointerup',    onEnd);
+  track.addEventListener('pointercancel', onEnd);
+  track.addEventListener('pointerleave',  () => dragging && onEnd());
+
+  // Optional autoplay (disabled by default)
+  const autoplay = false;
+  const intervalMs = 4500;
+  let timer = null;
+
+  function startAutoplay() { if (autoplay && !timer) timer = setInterval(() => next(), intervalMs); }
+  function stopAutoplay()  { if (timer) { clearInterval(timer); timer = null; } }
+
+  container.addEventListener('mouseenter', stopAutoplay);
+  container.addEventListener('mouseleave', startAutoplay);
+
+  // init
+  updateDots();
+  goTo(0, { behavior: 'auto' });
+  startAutoplay();
 })();
