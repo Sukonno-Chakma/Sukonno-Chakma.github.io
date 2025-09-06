@@ -181,9 +181,9 @@ collections:
   experiances:
     output: true
     permalink: /experiances/:path/
-  trips:
+  works:
     output: true
-    permalink: /trips/:path/
+    permalink: /works/:path/
   academics:
     output: true
     permalink: /academics/:path/
