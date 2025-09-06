@@ -132,8 +132,8 @@
 
 /* ---------- Solid, cross-browser chevron arrows (no SVG/mask) ---------- */
 :root {
-  --arrow-size: 14px;          /* length of each chevron arm */
-  --arrow-thickness: 2px;      /* line thickness */
+  --arrow-size: 7px;          /* length of each chevron arm */
+  --arrow-thickness: 1px;      /* line thickness */
   --arrow-color: #6b7280;      /* icon color */
 }
 
