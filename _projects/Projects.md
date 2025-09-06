@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Undergraduate projects"
 permalink: /projects/
 layout: single
 author_profile: true
