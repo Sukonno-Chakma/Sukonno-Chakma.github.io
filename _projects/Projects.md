@@ -18,6 +18,7 @@ assessment of Tropical Cyclone Impacts**
   - Translation speed showed a moderate negative correlation (r = –0.41), meaning slower cyclones drive greater chlorophyll blooms.
   - Exceptional cases (like Hikaa and Luban) suggest other environmental or data-related factors also play roles.
   </div>
+  ---
     <div class="project__images">
     <div class="carousel">
       <img src="{{ '/images/project1.jpeg' | relative_url }}">
