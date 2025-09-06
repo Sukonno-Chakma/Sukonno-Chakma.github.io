@@ -1,0 +1,55 @@
+/* ===== Field Works (no slider) ===== */
+
+.field-works {
+  max-width: 980px;
+  margin: 0 auto 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.field-card {
+  display: grid;
+  grid-template-columns: 140px 1fr; /* thumb | text */
+  gap: 1rem;
+  align-items: start;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(17,24,39,0.06);
+}
+
+.field-card .thumb {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;          /* neat crop like the screenshot */
+  border-radius: 12px;
+  display: block;
+}
+
+.field-card .details h3,
+.field-card .details h4,
+.field-card .details h5 {
+  margin: 0 0 .2rem;
+}
+
+.field-card .eyebrow {
+  font-size: .9rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: .5rem;
+}
+
+.field-card .details ul { margin: 0; padding-left: 1.1rem; }
+.field-card .details li { margin: .25rem 0; }
+
+@media (max-width: 760px) {
+  .field-card {
+    grid-template-columns: 1fr;   /* stack on small screens */
+  }
+  .field-card .thumb {
+    width: 100%;
+    height: 190px;                /* keep a nice header image */
+  }
+}
