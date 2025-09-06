@@ -130,61 +130,54 @@
   padding: 6px;
 }
 
-.carousel__btn { 
+/* ---------- Solid, cross-browser chevron arrows (no SVG/mask) ---------- */
+:root {
+  --arrow-size: 14px;          /* length of each chevron arm */
+  --arrow-thickness: 2px;      /* line thickness */
+  --arrow-color: #6b7280;      /* icon color */
+}
+
+.carousel__btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 5;                  /* keep above the slide */
   display: grid;
   place-items: center;
   width: 32px;
   height: 32px;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;      /* light border */
-  background: #f9fafb;            /* light bg */
-  color: #6b7280;                 /* gray icon color */
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
   box-shadow: 0 1px 2px rgba(16,24,40,0.06);
   cursor: pointer;
-  transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease, opacity .2s ease;
-  font-size: 0;                   /* hides any text like < or > */
+  transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease;
+  font-size: 0;                /* hide any "<" ">" text */
   line-height: 1;
+  color: var(--arrow-color);
 }
 .carousel__btn:hover {
   transform: translateY(-50%) scale(1.06);
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0 2px 6px rgba(16,24,40,0.10);
-.carousel__btn:active { transform: translateY(-50%) scale(.98);  }
+}
+.carousel__btn:active { transform: translateY(-50%) scale(.98); }
+.carousel__btn > svg, .carousel__btn > span { display: none; } /* hide inline icons/text */
+
 .carousel__btn--prev { left: 8px; }
 .carousel__btn--next { right: 8px; }
 
-.carousel__dots {
-  position: absolute; left: 50%; bottom: .55rem; transform: translateX(-50%);
-  display: flex; gap: .4rem;
-}
-.carousel__dots button {
-  width: 8px; height: 8px; border-radius: 999px; border: 0;
-  background: var(--dot-inactive);
-  cursor: pointer;
-  transition: transform .12s ease, background-color .2s ease;
-}
-.carousel__dots button:hover { transform: scale(1.1); }
-.carousel__dots button[aria-current="true"] { background: var(--dot-active); }
-
-@media (prefers-color-scheme: dark) {
-  .project,
-  .project__images .carousel { background: var(--card-bg) !important; border-color: var(--card-border) !important; }
-  .carousel__btn { background: var(--ctrl-bg) !important; border-color: var(--ctrl-border) !important; color: var(--icon) !important; }
-  .carousel__dots button { background: var(--dot-inactive) !important; }
-  .carousel__dots button[aria-current="true"] { background: var(--dot-active) !important; }
-}
+/* Draw the chevron with borders so it works everywhere */
 .carousel__btn::before {
   content: "";
-  width: 14px;
-  height: 14px;
-  background: currentColor;
+  width: var(--arrow-size);
+  height: var(--arrow-size);
   display: block;
-  /* Chevron-right path (we flip for prev) */
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 6l6 6-6 6'/></svg>") center / contain no-repeat;
-          mask: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22black%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M9 6l6 6-6 6%22/></svg>') center / contain no-repeat;
+  border-right: var(--arrow-thickness) solid var(--arrow-color);
+  border-bottom: var(--arrow-thickness) solid var(--arrow-color);
 }
-.carousel__btn--prev::before { transform: scaleX(-1); }  /* flip to left */
+
+/* Point them the right way */
+.carousel__btn--next::before { transform: rotate(-45deg); }  /* → */
+.carousel__btn--prev::before { transform: rotate(135deg); }  /* ← */
 
