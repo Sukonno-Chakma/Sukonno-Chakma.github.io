@@ -190,3 +190,23 @@
   .report-images--lg { --slider-max-width: 100%; }
   .report-images .slide { aspect-ratio: 4 / 3; max-height: 360px; }
 }
+.report-images .slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+  /* remove forced aspect ratio */
+  aspect-ratio: auto;
+  max-height: none; /* let content decide */
+  padding: 0.5rem;  /* optional, small breathing space */
+}
+
+.report-images .slide img {
+  max-width: 100%;   /* never overflow horizontally */
+  max-height: 480px; /* cap so huge images don’t blow up the layout */
+  height: auto;
+  width: auto;
+  object-fit: scale-down; /* scale but don’t stretch */
+}
