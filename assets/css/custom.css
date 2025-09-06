@@ -2,3 +2,8 @@
 .page__footer {
   display: none !important;
 }
+.page__sidebar,
+.toc,
+.toc-sidebar {
+  display: none !important;
+}
