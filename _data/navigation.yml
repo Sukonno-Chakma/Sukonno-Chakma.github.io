@@ -12,10 +12,10 @@ main:
     url: /projects/
 
   - title: "Experiances"
-    url: /Experiances/    
+    url: /experiances/    
         
   - title: "Beyond academics"
-    url: /Beyond academics/
+    url: /academics/
     
   - title: "CV"
     url: /files/Sukonno's_CV_main.pdf
