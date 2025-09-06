@@ -7,15 +7,14 @@ author_profile: true
 <link rel="stylesheet" href="{{ '/assets/css/experiances.css' | relative_url }}">
 
 <div class="project-wrap" markdown="1">
-
+<div class="report-body" markdown="1">
+  
 # Assessment of Water Quality Parameters and Their Impact on Tilapia Production in Aquaculture Ponds
 **Date:** February 13–20, 2025  
 
 > Internship at Bluetech Life Science & Agro Ltd.
 
 ---
-
-<div class="report-body" markdown="1">
 
 ## Overview
 - Conducted a week-long internship at Bluetech Life Science & Agro Ltd. focusing on aquaculture water quality monitoring.  
@@ -33,8 +32,6 @@ author_profile: true
 - **Ammonia (NH₃)** spiked up to 2 mg/L in Pond 1 (toxic), while other ponds stayed within ~0.25–1 mg/L.  
 - Final interpretation emphasized urgent need for nighttime aeration, controlled feeding, and buffering measures to maintain safe aquaculture conditions.
 
-</div>
-
 ---
 
 <div class="report-images">
@@ -50,7 +47,7 @@ author_profile: true
   <img src="{{ '/images/I10.png' | relative_url }}" alt="" />
   <img src="{{ '/images/I11.png' | relative_url }}" alt="" />
 </div>
-
+</div>
 </div>
 
 <script src="{{ '/assets/js/experiances.js' | relative_url }}"></script>
