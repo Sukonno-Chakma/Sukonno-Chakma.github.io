@@ -7,3 +7,5 @@
 .toc-sidebar {
   display: none !important;
 }
+/* Hide any nav link to /markdown/ if a cached page still renders it */
+.greedy-nav a[href="/markdown/"] { display: none !important; }
