@@ -4,6 +4,9 @@ permalink: /works/
 layout: single
 author_profile: true
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/works.css' | relative_url }}">
+
 <div class="field-works">
 
   <article class="field-card">
