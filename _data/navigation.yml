@@ -12,7 +12,10 @@ main:
     url: /projects/
 
   - title: "Experiances"
-    url: /experiances/    
+    url: /experiances/
+    
+  - title: "Field works"
+    url: /works/ 
         
   - title: "Beyond academics"
     url: /academics/
