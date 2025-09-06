@@ -1,183 +1,192 @@
-/* ---------- Card (subtle outline + shadow) ---------- */
-.project {
-  display: grid;
-  gap: 1.25rem;
-  align-items: start;
-  margin: 1.75rem 0;
-  padding: 1rem;
-  border: 1px solid rgba(0,0,0,0.08);           /* faint outline */
-  border-radius: 14px;
-  background: #fff;
-  box-shadow:
-    0 1px 2px rgba(0,0,0,0.04),
-    0 8px 24px rgba(0,0,0,0.06);                 /* soft shadow */
-}
-
-@media (min-width: 900px) {
-  .project {
-    grid-template-columns: 0.9fr 1.6fr; /* about 40% slider / 60% content */
-  }
-}
-
-/* ---------- Uniform slider size WITHOUT cropping ---------- */
-/* Set a consistent viewport height. Clamp keeps it responsive but equal. */
-.project__images .carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  height: clamp(260px, 34vw, 440px);             /* same visual size everywhere */
-  background: #fafafa;                           /* light backdrop behind images */
-  border: 1px solid rgba(0,0,0,0.06);
-}
-
-/* Build the track + slides like before */
-.carousel__track { display: flex; height: 100%; transition: transform 450ms ease; }
-.carousel__slide { min-width: 100%; height: 100%; display: grid; place-items: center; }
-
-/* Show the entire image, never crop or distort */
-.carousel__slide img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;                            /* keeps full image + quality */
-  image-rendering: auto;
-  /* Optional: inner padding so edges don’t touch frame */
-  padding: 6px;
-  background: #fff;                               /* white matting under transparent PNGs */
-  border-radius: 8px;
-}
-
-/* ---------- Controls (tidy, subtle) ---------- */
-.carousel__btn {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  border: 0; cursor: pointer;
-  width: 2.2rem; height: 2.2rem; border-radius: 10px;
-  background: rgba(0,0,0,0.48); color: #fff; font-size: 1.25rem;
-  display: grid; place-items: center;
-}
-.carousel__btn--prev { left: .5rem; }
-.carousel__btn--next { right: .5rem; }
-.carousel__btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-
-/* ---------- Dots ---------- */
-.carousel__dots {
-  position: absolute; left: 50%; bottom: .5rem; transform: translateX(-50%);
-  display: flex; gap: .35rem;
-}
-.carousel__dots button {
-  width: .5rem; height: .5rem; border-radius: 999px; border: 0;
-  background: rgba(0,0,0,0.25); cursor: pointer;
-}
-.carousel__dots button[aria-current="true"] { background: rgba(0,0,0,0.6); }
-
-/* ---------- Right column typography ---------- */
-.project__content h2,
-.project__content h3 { margin: 0 0 .4rem; }
-.project__content p { margin: 0 0 .5rem; }
-.project__content ul { margin: .3rem 0 0 1rem; }
-.project__content {
-  font-size: 1rem;       /* or 1.05rem */
-  line-height: 1.6;      /* better paragraph flow */
-  max-width: 65ch;       /* keeps text lines comfortable length */
-}
-/* ========== Slider look & motion aligned with 'experiances.css' ========== */
 :root {
   --card-bg: #ffffff;
-  --card-border: #e5e7eb;
-  --icon: #6b7280;
-  --dot-inactive: #cfd3d9;
-  --dot-active: #6b7280;
-  --ctrl-bg: #f9fafb;
-  --ctrl-border: #e5e7eb;
+  --card-border: #e5e7eb;     /* light gray border */
+  --text-muted: #6b7280;      /* medium gray text */
+  --icon: #6b7280;            /* arrow icon color */
+  --dot-inactive: #cfd3d9;    /* small light gray */
+  --dot-active: #6b7280;      /* medium gray active */
+  --ctrl-bg: #f9fafb;         /* light control bg */
+  --ctrl-border: #e5e7eb;     /* light control border */
   --ctrl-shadow: 0 1px 2px rgba(16,24,40,0.06);
 }
 
-.project {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 14px;
-  box-shadow:
-    0 1px 2px rgba(0,0,0,0.04),
-    0 8px 24px rgba(0,0,0,0.06);
+.project-wrap {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 1rem 2rem;
 }
 
-.project__images .carousel {
+.report-body,
+.report-images {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(17,24,39,0.06);
+}
+
+.report-body {
+  padding: 1rem 1.25rem;
+  margin: 0 0 1rem;
+  color: #111827;
+}
+.report-body h2,
+.report-body h3 { margin-top: .6rem; margin-bottom: .4rem; }
+.report-body ul { margin: .25rem 0 .25rem 1.1rem; }
+.report-body li { margin: .2rem 0; color: #1f2937; }
+.report-body em, .report-body strong { color: #111827; }
+
+/* ---------- Slider visuals (smaller, card-like) ---------- */
+.report-images {
+  --slider-max-width: 620px;
+  --slide-radius: 12px;
+  --ctrl-size: 30px;
+  --dot-size: 8px;
+
   position: relative;
+  max-width: var(--slider-max-width);
+  padding: .5rem .5rem .75rem;
+  margin: 0 auto;
+}
+
+/* Track & slides */
+.report-images .slider-track {
+  display: flex;
   overflow: hidden;
-  border-radius: 12px;
+  scroll-behavior: smooth;
+  border-radius: var(--slide-radius);
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  height: clamp(280px, 36vw, 480px);
+  box-shadow: none;
 }
 
-.carousel__track {
-  display: flex;
-  height: 100%;
-  transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.carousel__slide {
+.report-images .slide {
   min-width: 100%;
-  height: 100%;
   display: grid;
   place-items: center;
+  background: var(--card-bg);
+  aspect-ratio: 4 / 3;
+  max-height: 360px;
 }
-.carousel__slide img {
-  max-width: 100%;
-  max-height: 100%;
+
+.report-images .slide img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  background: #fff;
-  border-radius: 8px;
-  padding: 6px;
+  background: var(--card-bg);
+  display: block;
 }
 
-/* ---------- Solid, cross-browser chevron arrows (no SVG/mask) ---------- */
-:root {
-  --arrow-size: 7px;          /* length of each chevron arm */
-  --arrow-thickness: 1px;      /* line thickness */
-  --arrow-color: #6b7280;      /* icon color */
-}
-
-.carousel__btn {
+/* Controls */
+.report-images .ctrl {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 5;                  /* keep above the slide */
+  width: var(--ctrl-size);
+  height: var(--ctrl-size);
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;
-  background: #f9fafb;
-  box-shadow: 0 1px 2px rgba(16,24,40,0.06);
+  border: 1px solid var(--ctrl-border);
+  background: var(--ctrl-bg);
+  box-shadow: var(--ctrl-shadow);
   cursor: pointer;
-  transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease;
-  font-size: 0;                /* hide any "<" ">" text */
-  line-height: 1;
-  color: var(--arrow-color);
+  transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease, opacity .2s ease;
+  opacity: .96;
 }
-.carousel__btn:hover {
+.report-images .ctrl.prev { left: .45rem; }
+.report-images .ctrl.next { right: .45rem; }
+.report-images .ctrl:hover {
   transform: translateY(-50%) scale(1.06);
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 2px 6px rgba(16,24,40,0.10);
 }
-.carousel__btn:active { transform: translateY(-50%) scale(.98); }
-.carousel__btn > svg, .carousel__btn > span { display: none; } /* hide inline icons/text */
+.report-images .ctrl:active { transform: translateY(-50%) scale(.98); }
 
-.carousel__btn--prev { left: 8px; }
-.carousel__btn--next { right: 8px; }
-
-/* Draw the chevron with borders so it works everywhere */
-.carousel__btn::before {
-  content: "";
-  width: var(--arrow-size);
-  height: var(--arrow-size);
-  display: block;
-  border-right: var(--arrow-thickness) solid var(--arrow-color);
-  border-bottom: var(--arrow-thickness) solid var(--arrow-color);
+.report-images .ctrl svg {
+  width: 60%;
+  height: 60%;
+  color: var(--icon);
 }
 
-/* Point them the right way */
-.carousel__btn--next::before { transform: rotate(-45deg); }  /* → */
-.carousel__btn--prev::before { transform: rotate(135deg); }  /* ← */
+/* Dots */
+.report-images .dots {
+  display: flex;
+  gap: .4rem;
+  justify-content: center;
+  margin-top: .5rem;
+}
+.report-images .dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  background: var(--dot-inactive);
+  cursor: pointer;
+  transition: transform .12s ease, background-color .2s ease;
+}
+.report-images .dot:hover { transform: scale(1.1); }
+.report-images .dot.active { background: var(--dot-active); }
 
+/* ---------- Force light look even on dark themes ---------- */
+@media (prefers-color-scheme: dark) {
+  .report-body,
+  .report-images,
+  .report-images .slider-track,
+  .report-images .slide,
+  .report-images .slide img {
+    background: var(--card-bg) !important;
+    border-color: var(--card-border) !important;
+    box-shadow: 0 8px 20px rgba(17,24,39,0.06) !important;
+  }
+  .report-images .ctrl { background: var(--ctrl-bg) !important; border-color: var(--ctrl-border) !important; }
+  .report-images .ctrl svg { color: var(--icon) !important; }
+  .report-images .dot { background: var(--dot-inactive) !important; }
+  .report-images .dot.active { background: var(--dot-active) !important; }
+}
+
+/* Put the slider inside the card and make it larger */
+.report-body .report-images {
+  margin: .75rem auto 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: .5rem .5rem .75rem;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(17,24,39,0.06);
+}
+
+/* Large variant */
+.report-images--lg { --slider-max-width: 940px; }
+.report-images { max-width: var(--slider-max-width); }
+
+/* Bigger slides so details are readable */
+.report-images .slider-track {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+.report-images .slide {
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  /* more room for detail */
+  aspect-ratio: 16 / 10;
+  max-height: 560px;
+}
+.report-images .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* Controls & dots (light, subtle) */
+.report-images .ctrl { width: 34px; height: 34px; background:#f9fafb; border:1px solid #e5e7eb; box-shadow:0 1px 2px rgba(16,24,40,.06); }
+.report-images .ctrl svg { color:#6b7280; }
+.report-images .dot { width:9px; height:9px; background:#cfd3d9; }
+.report-images .dot.active { background:#6b7280; }
+
+/* Responsive: smaller on phones */
+@media (max-width: 640px) {
+  .report-images--lg { --slider-max-width: 100%; }
+  .report-images .slide { aspect-ratio: 4 / 3; max-height: 360px; }
+}
