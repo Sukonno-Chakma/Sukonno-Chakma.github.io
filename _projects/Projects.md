@@ -8,16 +8,6 @@ author_profile: true
 <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
 
 <div class="project">
-  <div class="project__images">
-    <div class="carousel">
-      <img src="{{ '/images/project1.jpeg' | relative_url }}">
-      <img src="{{ '/images/project2.jpeg' | relative_url }}">
-      <img src="{{ '/images/project3.png'  | relative_url }}">
-      <img src="{{ '/images/project4.png'  | relative_url }}">
-      <img src="{{ '/images/project5.png'  | relative_url }}">
-    </div>
-  </div>
-
   <div class="project__content" markdown="1">
   **Project 1 (Group): Inspection of short-term Chlorophyll Change in the Arabian Sea: A spaceborne
 assessment of Tropical Cyclone Impacts**  
@@ -27,6 +17,15 @@ assessment of Tropical Cyclone Impacts**
   - Cyclone intensity had only a negligible positive correlation with chlorophyll increase (r = 0.13).
   - Translation speed showed a moderate negative correlation (r = –0.41), meaning slower cyclones drive greater chlorophyll blooms.
   - Exceptional cases (like Hikaa and Luban) suggest other environmental or data-related factors also play roles.
+  </div>
+    <div class="project__images">
+    <div class="carousel">
+      <img src="{{ '/images/project1.jpeg' | relative_url }}">
+      <img src="{{ '/images/project2.jpeg' | relative_url }}">
+      <img src="{{ '/images/project3.png'  | relative_url }}">
+      <img src="{{ '/images/project4.png'  | relative_url }}">
+      <img src="{{ '/images/project5.png'  | relative_url }}">
+    </div>
   </div>
 </div>
 
