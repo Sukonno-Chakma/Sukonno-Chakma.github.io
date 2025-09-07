@@ -37,6 +37,4 @@ As the world faces serious environmental challenges, I feel motivated to be part
   **Passing Year:** 2015 | **GPA:** 4.89 / 5.00  
 
 
-Getting started
-======
 
