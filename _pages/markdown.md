@@ -1,11 +1,8 @@
 ---
 permalink: /markdown/
 title: "Markdown"
-author_profile: false
-layout: single
-toc: false
-toc_sticky: false
-redirect_from:
+author_profile: true
+redirect_from: 
   - /md/
   - /markdown.html
 ---
