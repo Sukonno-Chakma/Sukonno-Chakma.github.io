@@ -32,7 +32,8 @@ As the world faces serious environmental challenges, I feel motivated to be part
   **Passing Year:** 2017 | **GPA:** 4.92 / 5.00  
 
 - **Secondary School Certificate (SSC)**  
-  Lakers' Public School, Rangamati 
+  Lakers' Public School, Rangamati
+  <br>
   *Science*  
   **Passing Year:** 2015 | **GPA:** 4.89 / 5.00  
 
