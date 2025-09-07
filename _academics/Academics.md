@@ -1,10 +1,8 @@
 ---
-permalink: /
 title: "Beyond academics"
+permalink: /academics/
+layout: single
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
 ---
 
 ### Entrepreneurship  
