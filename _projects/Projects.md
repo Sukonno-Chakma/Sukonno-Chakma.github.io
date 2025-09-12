@@ -29,7 +29,9 @@ author_profile: true
 ---
 
 # Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh  
-**Type:** B.Sc. Research Project  
+**Type:** B.Sc. Research Project
+<br>
+**Supervisor:** <a href="https://www.sust.edu/departments/ocg/faculty/mahnaz3454-ocg@sust.edu" target="_blank">Mahnaz Islam Sonia (Assistant Professor)</a>
 
 - Vulnerability mapping used 11 spatial criteria, covering elevation, slope, land use, population density, literacy, and access to shelters/roads.  
 - About 32% of the study area was found to be at very high risk, especially in Mirsharai, Sandwip, Sitakunda, and Kutubdia.  
