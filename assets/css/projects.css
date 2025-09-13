@@ -1,27 +1,21 @@
 :root {
   --card-bg: #ffffff;
-  --card-border: #e5e7eb;
-  --text-muted: #6b7280;
-  --icon: #6b7280;
-  --dot-inactive: #cfd3d9;
-  --dot-active: #6b7280;
-  --ctrl-bg: #f9fafb;
-  --ctrl-border: #e5e7eb;
+  --card-border: #e5e7eb;     /* light gray border */
+  --text-muted: #6b7280;      /* medium gray text */
+  --icon: #6b7280;            /* arrow icon color */
+  --dot-inactive: #cfd3d9;    /* small light gray */
+  --dot-active: #6b7280;      /* medium gray active */
+  --ctrl-bg: #f9fafb;         /* light control bg */
+  --ctrl-border: #e5e7eb;     /* light control border */
   --ctrl-shadow: 0 1px 2px rgba(16,24,40,0.06);
-
-  /* simple knob for the image column */
-  --image-col: 520px; /* adjust 480–560px if you want */
 }
 
-/* Hug the left; no centered constraint */
 .project-wrap {
-  max-width: none;
-  width: 100%;
-  margin: 0;
-  padding: 0 1rem 2rem;   /* a little breathing room */
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 1rem 2rem;
 }
 
-/* Card look for both text and images */
 .report-body,
 .report-images {
   background: var(--card-bg);
@@ -30,60 +24,56 @@
   box-shadow: 0 8px 20px rgba(17,24,39,0.06);
 }
 
-/* Text block */
 .report-body {
   padding: 1rem 1.25rem;
-  margin: 0;
+  margin: 0 0 1rem;
   color: #111827;
 }
 .report-body h2,
 .report-body h3 { margin-top: .6rem; margin-bottom: .4rem; }
-.report-body ul { margin: .5rem 0 .5rem 1.1rem; }
-.report-body li { margin: .3rem 0; color: #1f2937; }
+.report-body ul { margin: .25rem 0 .25rem 1.1rem; }
+.report-body li { margin: .2rem 0; color: #1f2937; }
 .report-body em, .report-body strong { color: #111827; }
 
-/* ======= TWO-COLUMN LAYOUT (images left, text right) ======= */
-.project {
-  display: grid;
-  grid-template-columns: var(--image-col) minmax(0, 1fr); /* fluid text column */
-  align-items: start;
-  gap: 2rem;
-  margin: 2rem 0 3rem;
-}
+/* ---------- Slider visuals (smaller, card-like) ---------- */
+.report-images {
+  --slider-max-width: 620px;
+  --slide-radius: 12px;
+  --ctrl-size: 30px;
+  --dot-size: 8px;
 
-/* Slider container takes the fixed left column width */
-.project .report-images {
-  --slider-max-width: var(--image-col);
   position: relative;
   max-width: var(--slider-max-width);
   padding: .5rem .5rem .75rem;
+  margin: 0 auto;
 }
 
-/* Slider internals */
+/* Track & slides */
 .report-images .slider-track {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
-  border-radius: 12px;
+  border-radius: var(--slide-radius);
   background: var(--card-bg);
   border: 1px solid var(--card-border);
+  box-shadow: none;
 }
 
 .report-images .slide {
   min-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   background: var(--card-bg);
-  padding: .5rem;
+  aspect-ratio: 4 / 3;
+  max-height: 360px;
 }
 
 .report-images .slide img {
-  width: auto;            /* preserve intrinsic size */
-  height: auto;
-  max-width: 100%;        /* never overflow column */
-  max-height: 480px;      /* keep tall images under control */
-  object-fit: contain;    /* no distortion */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--card-bg);
+  display: block;
 }
 
 /* Controls */
@@ -91,8 +81,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
+  width: var(--ctrl-size);
+  height: var(--ctrl-size);
   display: grid;
   place-items: center;
   border-radius: 999px;
@@ -110,6 +100,8 @@
   background: #ffffff;
   box-shadow: 0 2px 6px rgba(16,24,40,0.10);
 }
+.report-images .ctrl:active { transform: translateY(-50%) scale(.98); }
+
 .report-images .ctrl svg {
   width: 60%;
   height: 60%;
@@ -124,16 +116,17 @@
   margin-top: .5rem;
 }
 .report-images .dot {
-  width: 9px;
-  height: 9px;
+  width: var(--dot-size);
+  height: var(--dot-size);
   border-radius: 50%;
   background: var(--dot-inactive);
   cursor: pointer;
   transition: transform .12s ease, background-color .2s ease;
 }
+.report-images .dot:hover { transform: scale(1.1); }
 .report-images .dot.active { background: var(--dot-active); }
 
-/* Light look on dark mode too */
+/* ---------- Force light look even on dark themes ---------- */
 @media (prefers-color-scheme: dark) {
   .report-body,
   .report-images,
@@ -150,9 +143,70 @@
   .report-images .dot.active { background: var(--dot-active) !important; }
 }
 
-/* Stack on small screens */
-@media (max-width: 900px) {
-  :root { --image-col: 100%; }
-  .project { grid-template-columns: 1fr; }
-  .project .report-images { max-width: 100%; }
+/* Put the slider inside the card and make it larger */
+.report-body .report-images {
+  margin: .75rem auto 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: .5rem .5rem .75rem;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(17,24,39,0.06);
+}
+
+/* Large variant */
+.report-images--lg { --slider-max-width: 940px; }
+.report-images { max-width: var(--slider-max-width); }
+
+/* Bigger slides so details are readable */
+.report-images .slider-track {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+.report-images .slide {
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  /* more room for detail */
+  aspect-ratio: 16 / 10;
+  max-height: 560px;
+}
+.report-images .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* Controls & dots (light, subtle) */
+.report-images .ctrl { width: 34px; height: 34px; background:#f9fafb; border:1px solid #e5e7eb; box-shadow:0 1px 2px rgba(16,24,40,.06); }
+.report-images .ctrl svg { color:#6b7280; }
+.report-images .dot { width:9px; height:9px; background:#cfd3d9; }
+.report-images .dot.active { background:#6b7280; }
+
+/* Responsive: smaller on phones */
+@media (max-width: 640px) {
+  .report-images--lg { --slider-max-width: 100%; }
+  .report-images .slide { aspect-ratio: 4 / 3; max-height: 360px; }
+}
+.report-images .slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+  /* remove forced aspect ratio */
+  aspect-ratio: auto;
+  max-height: none; /* let content decide */
+  padding: 0.5rem;  /* optional, small breathing space */
+}
+
+.report-images .slide img {
+  max-width: 100%;   /* never overflow horizontally */
+  max-height: 480px; /* cap so huge images don’t blow up the layout */
+  height: auto;
+  width: auto;
+  object-fit: scale-down; /* scale but don’t stretch */
 }
