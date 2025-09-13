@@ -7,10 +7,13 @@ author_profile: true
 
 <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
 
-<div class="project-wrap" markdown="1">
-<div class="report-body" markdown="1">
+<div class="project-wrap">
 
-# Project 1 (Group): Inspection of short-term Chlorophyll Change in the Arabian Sea  
+  <!-- ===== Project 1 ===== -->
+  <div class="project">
+    <div class="project-text report-body" markdown="1">
+
+### Project 1 (Group): Inspection of short-term Chlorophyll Change in the Arabian Sea  
 **Type:** Research Project (Remote Sensing & Oceanography Lab)
 
 - Nine out of ten cyclones showed increased chlorophyll concentration, with pre-monsoon cyclones producing stronger enhancements.  
@@ -18,19 +21,23 @@ author_profile: true
 - Translation speed showed a moderate negative correlation (r = –0.41), meaning slower cyclones drive greater chlorophyll blooms.  
 - Exceptional cases (like Hikaa and Luban) suggest other environmental or data-related factors also play roles.  
 
-<div class="report-images">
-  <img src="{{ '/images/project1.jpeg' | relative_url }}">
-  <img src="{{ '/images/project2.jpeg' | relative_url }}">
-  <img src="{{ '/images/project3.png'  | relative_url }}">
-  <img src="{{ '/images/project4.png'  | relative_url }}">
-  <img src="{{ '/images/project5.png'  | relative_url }}">
-</div>
+    </div>
 
----
+    <div class="project-images report-images">
+      <img src="{{ '/images/project1.jpeg' | relative_url }}">
+      <img src="{{ '/images/project2.jpeg' | relative_url }}">
+      <img src="{{ '/images/project3.png'  | relative_url }}">
+      <img src="{{ '/images/project4.png'  | relative_url }}">
+      <img src="{{ '/images/project5.png'  | relative_url }}">
+    </div>
+  </div>
 
-# Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh  
-**Type:** B.Sc. Research Project
-<br>
+  <!-- ===== Project 2 ===== -->
+  <div class="project">
+    <div class="project-text report-body" markdown="1">
+
+### Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh  
+**Type:** B.Sc. Research Project  
 **Supervisor:** <a href="https://www.sust.edu/departments/ocg/faculty/mahnaz3454-ocg@sust.edu" target="_blank">Mahnaz Islam Sonia (Assistant Professor)</a>
 
 - Vulnerability mapping used 11 spatial criteria, covering elevation, slope, land use, population density, literacy, and access to shelters/roads.  
@@ -38,17 +45,19 @@ author_profile: true
 - Social vulnerability is highest where population density is high and literacy is low, compounding risks for women and disabled populations.  
 - Mitigation capacity (shelters, healthcare, road networks) reduces risk in some regions, but gaps remain that require urgent infrastructure and community interventions.  
 
-<div class="report-images">
-  <img src="{{ '/images/p1.png'  | relative_url }}">
-  <img src="{{ '/images/p2.png'  | relative_url }}">
-  <img src="{{ '/images/p3.png'  | relative_url }}">
-  <img src="{{ '/images/p4.png'  | relative_url }}">
-  <img src="{{ '/images/p5.png'  | relative_url }}">
-  <img src="{{ '/images/p6.PNG'  | relative_url }}">
-  <img src="{{ '/images/p7.PNG'  | relative_url }}">
-</div>
+    </div>
 
-</div>
+    <div class="project-images report-images">
+      <img src="{{ '/images/p1.png'  | relative_url }}">
+      <img src="{{ '/images/p2.png'  | relative_url }}">
+      <img src="{{ '/images/p3.png'  | relative_url }}">
+      <img src="{{ '/images/p4.png'  | relative_url }}">
+      <img src="{{ '/images/p5.png'  | relative_url }}">
+      <img src="{{ '/images/p6.PNG'  | relative_url }}">
+      <img src="{{ '/images/p7.PNG'  | relative_url }}">
+    </div>
+  </div>
+
 </div>
 
 <script src="{{ '/assets/js/projects.js' | relative_url }}"></script>
