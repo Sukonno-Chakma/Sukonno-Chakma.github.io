@@ -210,3 +210,34 @@
   width: auto;
   object-fit: scale-down; /* scale but don’t stretch */
 }
+/* --- New layout for projects --- */
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 95%;          /* stretch further left */
+  margin: 2rem auto;
+  gap: 2rem;
+}
+
+.project-text {
+  flex: 1 1 60%;
+  text-align: left;
+}
+
+.project-images {
+  flex: 0 0 auto;
+  max-width: 480px;   /* keeps reasonable size */
+}
+
+/* Make it responsive: stack on small screens */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-images {
+    max-width: 100%;
+  }
+}
