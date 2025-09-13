@@ -8,16 +8,20 @@
   --ctrl-bg: #f9fafb;
   --ctrl-border: #e5e7eb;
   --ctrl-shadow: 0 1px 2px rgba(16,24,40,0.06);
+
+  /* simple knob for the image column */
+  --image-col: 520px; /* adjust 480–560px if you want */
 }
 
-/* STRETCH THE WRAPPER LEFT */
+/* Hug the left; no centered constraint */
 .project-wrap {
-  max-width: none;         /* remove the 980px limit */
-  width: 95%;               /* almost full page */
-  margin-left: 2rem;        /* push from left edge */
-  padding: 0 1rem 2rem;
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem 2rem;   /* a little breathing room */
 }
 
+/* Card look for both text and images */
 .report-body,
 .report-images {
   background: var(--card-bg);
@@ -26,38 +30,43 @@
   box-shadow: 0 8px 20px rgba(17,24,39,0.06);
 }
 
+/* Text block */
 .report-body {
   padding: 1rem 1.25rem;
-  margin: 0 0 1rem;
+  margin: 0;
   color: #111827;
 }
 .report-body h2,
 .report-body h3 { margin-top: .6rem; margin-bottom: .4rem; }
-.report-body ul { margin: .25rem 0 .25rem 1.1rem; }
-.report-body li { margin: .2rem 0; color: #1f2937; }
+.report-body ul { margin: .5rem 0 .5rem 1.1rem; }
+.report-body li { margin: .3rem 0; color: #1f2937; }
 .report-body em, .report-body strong { color: #111827; }
 
-/* ---------- Slider visuals ---------- */
-.report-images {
-  --slider-max-width: 620px;
-  --slide-radius: 12px;
-  --ctrl-size: 30px;
-  --dot-size: 8px;
+/* ======= TWO-COLUMN LAYOUT (images left, text right) ======= */
+.project {
+  display: grid;
+  grid-template-columns: var(--image-col) minmax(0, 1fr); /* fluid text column */
+  align-items: start;
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
 
+/* Slider container takes the fixed left column width */
+.project .report-images {
+  --slider-max-width: var(--image-col);
   position: relative;
   max-width: var(--slider-max-width);
   padding: .5rem .5rem .75rem;
-  margin: 0 auto;
 }
 
+/* Slider internals */
 .report-images .slider-track {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
-  border-radius: var(--slide-radius);
+  border-radius: 12px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  box-shadow: none;
 }
 
 .report-images .slide {
@@ -65,26 +74,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  aspect-ratio: auto;
-  max-height: none;
-  padding: 0.5rem;
+  background: var(--card-bg);
+  padding: .5rem;
 }
 
 .report-images .slide img {
-  max-width: 100%;
-  max-height: 480px;
+  width: auto;            /* preserve intrinsic size */
   height: auto;
-  width: auto;
-  object-fit: scale-down;
+  max-width: 100%;        /* never overflow column */
+  max-height: 480px;      /* keep tall images under control */
+  object-fit: contain;    /* no distortion */
 }
 
+/* Controls */
 .report-images .ctrl {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: var(--ctrl-size);
-  height: var(--ctrl-size);
+  width: 34px;
+  height: 34px;
   display: grid;
   place-items: center;
   border-radius: 999px;
@@ -102,13 +110,13 @@
   background: #ffffff;
   box-shadow: 0 2px 6px rgba(16,24,40,0.10);
 }
-.report-images .ctrl:active { transform: translateY(-50%) scale(.98); }
 .report-images .ctrl svg {
   width: 60%;
   height: 60%;
   color: var(--icon);
 }
 
+/* Dots */
 .report-images .dots {
   display: flex;
   gap: .4rem;
@@ -116,17 +124,16 @@
   margin-top: .5rem;
 }
 .report-images .dot {
-  width: var(--dot-size);
-  height: var(--dot-size);
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--dot-inactive);
   cursor: pointer;
   transition: transform .12s ease, background-color .2s ease;
 }
-.report-images .dot:hover { transform: scale(1.1); }
 .report-images .dot.active { background: var(--dot-active); }
 
-/* ---------- Force light look ---------- */
+/* Light look on dark mode too */
 @media (prefers-color-scheme: dark) {
   .report-body,
   .report-images,
@@ -143,76 +150,9 @@
   .report-images .dot.active { background: var(--dot-active) !important; }
 }
 
-/* Layout: IMAGES LEFT + TEXT RIGHT */
-.project {
-  display: flex;
-  flex-direction: row;    /* images first, text second */
-  align-items: flex-start;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.project-images {
-  flex: 0 0 auto;
-  max-width: 480px;
-}
-
-.project-text {
-  flex: 1 1 auto;
-  text-align: left;
-}
-
-/* Responsive: stack on small screens */
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-  }
-  .project-images {
-    max-width: 100%;
-  }
-}
-/* ====== OVERRIDES: full-width and real two-column layout ====== */
-
-/* Use the whole content width and hug the left */
-.project-wrap {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;              /* no auto-centering */
-  padding-left: 1rem;                /* small left breathing room */
-  padding-right: 1rem;
-}
-
-/* Grid: fixed image column on the left, fluid text on the right */
-.project {
-  display: grid !important;
-  grid-template-columns: 420px 1fr;  /* image column then big text column */
-  align-items: start;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-/* Keep the slider the exact width we want, preserve aspect ratio */
-.project .report-images { --slider-max-width: 420px !important; }
-.project .report-images { max-width: var(--slider-max-width) !important; }
-.report-images .slide img {
-  width: auto !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: 480px !important;    /* adjust if you want taller */
-  object-fit: contain !important;  /* never distort */
-}
-
-/* Let the text actually breathe */
-.project-text {
-  min-width: 0;        /* allow the grid item to shrink naturally */
-}
-
-/* On small screens, stack them */
-@media (max-width: 768px) {
-  .project {
-    grid-template-columns: 1fr;
-  }
-  .project .report-images {
-    --slider-max-width: 100% !important;
-  }
+/* Stack on small screens */
+@media (max-width: 900px) {
+  :root { --image-col: 100%; }
+  .project { grid-template-columns: 1fr; }
+  .project .report-images { max-width: 100%; }
 }
