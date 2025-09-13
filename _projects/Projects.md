@@ -9,7 +9,9 @@ author_profile: true
 
 <div class="project-wrap">
 
+  <!-- Project 1 -->
   <div class="project">
+    <!-- IMAGES LEFT -->
     <div class="project-images report-images">
       <img src="{{ '/images/project1.jpeg' | relative_url }}">
       <img src="{{ '/images/project2.jpeg' | relative_url }}">
@@ -27,11 +29,11 @@ author_profile: true
         <li>Exceptional cases (like Hikaa and Luban) suggest other environmental or data-related factors also play roles.</li>
       </ul>
     </div>
-
   </div>
 
-
+  <!-- Project 2 -->
   <div class="project">
+    <!-- IMAGES LEFT -->
     <div class="project-images report-images">
       <img src="{{ '/images/p1.png'  | relative_url }}">
       <img src="{{ '/images/p2.png'  | relative_url }}">
@@ -46,9 +48,7 @@ author_profile: true
       <p>
         <strong>Type:</strong> B.Sc. Research Project<br>
         <strong>Supervisor:</strong>
-        <a href="https://www.sust.edu/departments/ocg/faculty/mahnaz3454-ocg@sust.edu" target="_blank">
-          Mahnaz Islam Sonia (Assistant Professor)
-        </a>
+        <a href="https://www.sust.edu/departments/ocg/faculty/mahnaz3454-ocg@sust.edu" target="_blank">Mahnaz Islam Sonia (Assistant Professor)</a>
       </p>
       <ul>
         <li>Vulnerability mapping used 11 spatial criteria, covering elevation, slope, land use, population density, literacy, and access to shelters/roads.</li>
@@ -57,9 +57,7 @@ author_profile: true
         <li>Mitigation capacity (shelters, healthcare, road networks) reduces risk in some regions, but gaps remain that require urgent infrastructure and community interventions.</li>
       </ul>
     </div>
-
   </div>
 
 </div>
 
-<script src="{{ '/assets/js/projects.js' | relative_url }}"></script>
