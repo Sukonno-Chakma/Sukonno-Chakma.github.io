@@ -171,3 +171,48 @@
     max-width: 100%;
   }
 }
+/* ====== OVERRIDES: full-width and real two-column layout ====== */
+
+/* Use the whole content width and hug the left */
+.project-wrap {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;              /* no auto-centering */
+  padding-left: 1rem;                /* small left breathing room */
+  padding-right: 1rem;
+}
+
+/* Grid: fixed image column on the left, fluid text on the right */
+.project {
+  display: grid !important;
+  grid-template-columns: 420px 1fr;  /* image column then big text column */
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Keep the slider the exact width we want, preserve aspect ratio */
+.project .report-images { --slider-max-width: 420px !important; }
+.project .report-images { max-width: var(--slider-max-width) !important; }
+.report-images .slide img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 480px !important;    /* adjust if you want taller */
+  object-fit: contain !important;  /* never distort */
+}
+
+/* Let the text actually breathe */
+.project-text {
+  min-width: 0;        /* allow the grid item to shrink naturally */
+}
+
+/* On small screens, stack them */
+@media (max-width: 768px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+  .project .report-images {
+    --slider-max-width: 100% !important;
+  }
+}
