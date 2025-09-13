@@ -9,8 +9,8 @@ author_profile: true
 
 <div class="project-wrap">
 
-  <!-- Project 1 (images + text in the SAME project div) -->
-  <div class="project">
+  <!-- Project 1: ONE div (report-body) containing images + text -->
+  <div class="project report-body">
     <div class="project-images report-images">
       <img src="{{ '/images/project1.jpeg' | relative_url }}">
       <img src="{{ '/images/project2.jpeg' | relative_url }}">
@@ -18,7 +18,7 @@ author_profile: true
       <img src="{{ '/images/project4.png'  | relative_url }}">
       <img src="{{ '/images/project5.png'  | relative_url }}">
     </div>
-    <div class="project-text report-body">
+    <div class="project-text">
       <h3>Project 1 (Group): Inspection of short-term Chlorophyll Change in the Arabian Sea</h3>
       <p><strong>Type:</strong> Research Project (Remote Sensing & Oceanography Lab)</p>
       <ul>
@@ -29,9 +29,8 @@ author_profile: true
       </ul>
     </div>
   </div>
-
-  <!-- Project 2 (images + text in the SAME project div) -->
-  <div class="project">
+  <!-- Project 2: ONE div (report-body) containing images + text -->
+  <div class="project report-body">
     <div class="project-images report-images">
       <img src="{{ '/images/p1.png'  | relative_url }}">
       <img src="{{ '/images/p2.png'  | relative_url }}">
@@ -41,7 +40,7 @@ author_profile: true
       <img src="{{ '/images/p6.PNG'  | relative_url }}">
       <img src="{{ '/images/p7.PNG'  | relative_url }}">
     </div>
-    <div class="project-text report-body">
+    <div class="project-text">
       <h3>Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh</h3>
       <p>
         <strong>Type:</strong> B.Sc. Research Project<br>
@@ -61,4 +60,5 @@ author_profile: true
 
 </div>
 
+<!-- Ensure slider initializes after DOM is parsed -->
 <script defer src="{{ '/assets/js/projects.js' | relative_url }}"></script>
