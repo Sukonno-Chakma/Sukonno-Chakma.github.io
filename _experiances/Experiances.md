@@ -2,6 +2,7 @@
 title: "Internship — Water Quality & Tilapia Production"
 permalink: /experiances/
 layout: single
+classes: wide
 author_profile: true
 ---
 <link rel="stylesheet" href="{{ '/assets/css/experiances.css' | relative_url }}">
