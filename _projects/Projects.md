@@ -9,9 +9,8 @@ author_profile: true
 
 <div class="project-wrap">
 
-  <!-- Project 1 -->
+  <!-- Project 1 (images + text in the SAME project div) -->
   <div class="project">
-    <!-- IMAGES LEFT -->
     <div class="project-images report-images">
       <img src="{{ '/images/project1.jpeg' | relative_url }}">
       <img src="{{ '/images/project2.jpeg' | relative_url }}">
@@ -31,9 +30,8 @@ author_profile: true
     </div>
   </div>
 
-  <!-- Project 2 -->
+  <!-- Project 2 (images + text in the SAME project div) -->
   <div class="project">
-    <!-- IMAGES LEFT -->
     <div class="project-images report-images">
       <img src="{{ '/images/p1.png'  | relative_url }}">
       <img src="{{ '/images/p2.png'  | relative_url }}">
@@ -48,7 +46,9 @@ author_profile: true
       <p>
         <strong>Type:</strong> B.Sc. Research Project<br>
         <strong>Supervisor:</strong>
-        <a href="https://www.sust.edu/departments/ocg/faculty/mahnaz3454-ocg@sust.edu" target="_blank">Mahnaz Islam Sonia (Assistant Professor)</a>
+        <a href="https://www.sust.edu/departments/ocg/faculty/mahnaz3454-ocg@sust.edu" target="_blank">
+          Mahnaz Islam Sonia (Assistant Professor)
+        </a>
       </p>
       <ul>
         <li>Vulnerability mapping used 11 spatial criteria, covering elevation, slope, land use, population density, literacy, and access to shelters/roads.</li>
@@ -61,3 +61,4 @@ author_profile: true
 
 </div>
 
+<script defer src="{{ '/assets/js/projects.js' | relative_url }}"></script>
