@@ -12,7 +12,7 @@ author_profile: true
 # Assessment of Water Quality Parameters and Their Impact on Tilapia Production in Aquaculture Ponds
 **Date:** February 13–20, 2025  
 
-> Internship at Bluetech Life Science & Agro Ltd.
+> Internship at Bluetech Life Science & Agro Ltd | Sylhet. 
 
 ---
 
