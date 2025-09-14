@@ -8,9 +8,9 @@ redirect_from:
 ---
 
 Hi, I’m Sukonno Chakma.
-I graduated with a bachelor’s degree in Oceanography from Shahjalal University of Science and Technology. I’ve always been curious about how the environment works and how everything is connected — the oceans, the weather, and even how we as humans affect it all.
+I graduated with a bachelor’s degree in Oceanography from Shahjalal University of Science and Technology. I’ve always been curious about how the environment works and how everything is interconnected — the oceans, the weather, and even how we as humans affect it all.
 
-As the world faces serious environmental challenges, I feel motivated to be part of the solution. I’m especially interested in learning more about building models and using remote sensing techniques to better understand what’s happening around us. My goal is to turn that knowledge into something useful that can actually help protect our planet. 
+As the world faces serious environmental challenges, I am motivated to be part of the solution. I’m especially interested in learning more about building models and using remote sensing techniques to understand better what is happening around us. My goal is to turn that knowledge into something useful that can actually help protect our planet. 
 
 ## Research Interests
 
