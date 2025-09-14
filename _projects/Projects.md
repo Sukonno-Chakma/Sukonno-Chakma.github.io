@@ -32,24 +32,24 @@ author_profile: true
   </div>
   <!-- Project 2: ONE div (report-body) containing images + text -->
   <div class="project report-body">
-  <img src="{{ '/images/p1.png' | relative_url }}" loading="lazy" alt="p1" />
-  <img src="{{ '/images/p2.1.PNG' | relative_url }}" loading="lazy" alt="p2.1" />
-  <img src="{{ '/images/p2.png' | relative_url }}" loading="lazy" alt="p2" />
-  <img src="{{ '/images/p3.png' | relative_url }}" loading="lazy" alt="p3" />
-  <img src="{{ '/images/p4.png' | relative_url }}" loading="lazy" alt="p4" />
-  <img src="{{ '/images/p5.png' | relative_url }}" loading="lazy" alt="p5" />
-  <img src="{{ '/images/p6.png' | relative_url }}" loading="lazy" alt="p6" />
-  <img src="{{ '/images/p7.png' | relative_url }}" loading="lazy" alt="p7" />
-  <img src="{{ '/images/p8.png' | relative_url }}" loading="lazy" alt="p8" />
-  <img src="{{ '/images/p9.png' | relative_url }}" loading="lazy" alt="p9" />
-  <img src="{{ '/images/p10.png' | relative_url }}" loading="lazy" alt="p10" />
-  <img src="{{ '/images/p11.png' | relative_url }}" loading="lazy" alt="p11" />
-  <img src="{{ '/images/p12.png' | relative_url }}" loading="lazy" alt="p12" />
-  <img src="{{ '/images/p13.1.PNG' | relative_url }}" loading="lazy" alt="p13.1" />
-  <img src="{{ '/images/p13.png' | relative_url }}" loading="lazy" alt="p13" />
-  <img src="{{ '/images/p14.png' | relative_url }}" loading="lazy" alt="p14" />
-  <img src="{{ '/images/p15.png' | relative_url }}" loading="lazy" alt="p15" />
-  <img src="{{ '/images/p16.png' | relative_url }}" loading="lazy" alt="p16" />
+  <img src="{{ '/images/p1.png' | relative_url }}">
+  <img src="{{ '/images/p2.1.PNG' | relative_url }}">
+  <img src="{{ '/images/p2.png' | relative_url }}">
+  <img src="{{ '/images/p3.png' | relative_url }}">
+  <img src="{{ '/images/p4.png' | relative_url }}">
+  <img src="{{ '/images/p5.png' | relative_url }}">
+  <img src="{{ '/images/p6.png' | relative_url }}">
+  <img src="{{ '/images/p7.png' | relative_url }}">
+  <img src="{{ '/images/p8.png' | relative_url }}">
+  <img src="{{ '/images/p9.png' | relative_url }}">
+  <img src="{{ '/images/p10.png' | relative_url }}">
+  <img src="{{ '/images/p11.png' | relative_url }}">
+  <img src="{{ '/images/p12.png' | relative_url }}">
+  <img src="{{ '/images/p13.1.PNG' | relative_url }}">
+  <img src="{{ '/images/p13.png' | relative_url }}">
+  <img src="{{ '/images/p14.png' | relative_url }}">
+  <img src="{{ '/images/p15.png' | relative_url }}">
+  <img src="{{ '/images/p16.png' | relative_url }}">
     </div>
     <div class="project-text">
       <h3>Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh</h3>
