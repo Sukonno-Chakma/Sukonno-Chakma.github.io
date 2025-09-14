@@ -31,25 +31,27 @@ author_profile: true
     </div>
   </div>
   <!-- Project 2: ONE div (report-body) containing images + text -->
+    <!-- Project 2: ONE div (report-body) containing images + text -->
   <div class="project report-body">
-  <img src="{{ '/images/p1.png' | relative_url }}">
-  <img src="{{ '/images/p2.1.PNG' | relative_url }}">
-  <img src="{{ '/images/p2.png' | relative_url }}">
-  <img src="{{ '/images/p3.png' | relative_url }}">
-  <img src="{{ '/images/p4.png' | relative_url }}">
-  <img src="{{ '/images/p5.png' | relative_url }}">
-  <img src="{{ '/images/p6.png' | relative_url }}">
-  <img src="{{ '/images/p7.png' | relative_url }}">
-  <img src="{{ '/images/p8.png' | relative_url }}">
-  <img src="{{ '/images/p9.png' | relative_url }}">
-  <img src="{{ '/images/p10.png' | relative_url }}">
-  <img src="{{ '/images/p11.png' | relative_url }}">
-  <img src="{{ '/images/p12.png' | relative_url }}">
-  <img src="{{ '/images/p13.1.PNG' | relative_url }}">
-  <img src="{{ '/images/p13.png' | relative_url }}">
-  <img src="{{ '/images/p14.png' | relative_url }}">
-  <img src="{{ '/images/p15.png' | relative_url }}">
-  <img src="{{ '/images/p16.png' | relative_url }}">
+    <div class="project-images report-images">
+      <img src="{{ '/images/p1.png' | relative_url }}">
+      <img src="{{ '/images/p2.1.PNG' | relative_url }}">
+      <img src="{{ '/images/p2.png' | relative_url }}">
+      <img src="{{ '/images/p3.png' | relative_url }}">
+      <img src="{{ '/images/p4.png' | relative_url }}">
+      <img src="{{ '/images/p5.png' | relative_url }}">
+      <img src="{{ '/images/p6.png' | relative_url }}">
+      <img src="{{ '/images/p7.png' | relative_url }}">
+      <img src="{{ '/images/p8.png' | relative_url }}">
+      <img src="{{ '/images/p9.png' | relative_url }}">
+      <img src="{{ '/images/p10.png' | relative_url }}">
+      <img src="{{ '/images/p11.png' | relative_url }}">
+      <img src="{{ '/images/p12.png' | relative_url }}">
+      <img src="{{ '/images/p13.1.PNG' | relative_url }}">
+      <img src="{{ '/images/p13.png' | relative_url }}">
+      <img src="{{ '/images/p14.png' | relative_url }}">
+      <img src="{{ '/images/p15.png' | relative_url }}">
+      <img src="{{ '/images/p16.png' | relative_url }}">
     </div>
     <div class="project-text">
       <h3>Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh</h3>
@@ -68,6 +70,7 @@ author_profile: true
       </ul>
     </div>
   </div>
+
 
 </div>
 
