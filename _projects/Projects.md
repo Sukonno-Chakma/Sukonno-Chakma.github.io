@@ -21,7 +21,7 @@ author_profile: true
     <div class="project-text">
       <h3>Project 1 (Group): Inspection of short-term Chlorophyll Change in the Arabian Sea</h3>
       <p><strong>Type:</strong> Remote Sensing & Oceanography Lab | 2022</p>
-      <p><strong>Authors:</strong> Sukonno Chakma, Md. Emrul Hasan, Nahia Mantaka Chowdhury, Md. Rashed-Ul-Alam, Raida Kadir</p>
+      <p><strong>Authors:</strong> Sukonno Chakma, Md. Emrul Hasan, Nahia Mantaka Chowdhury, Md. Rashed-Ul-Alam, Raida Kadir.</p>
       <ul>
         <li>Nine out of ten cyclones showed increased chlorophyll concentration, with pre-monsoon cyclones producing stronger enhancements.</li>
         <li>Cyclone intensity had only a negligible positive correlation with chlorophyll increase (r = 0.13).</li>
@@ -33,13 +33,24 @@ author_profile: true
   <!-- Project 2: ONE div (report-body) containing images + text -->
   <div class="project report-body">
     <div class="project-images report-images">
-      <img src="{{ '/images/p1.png'  | relative_url }}">
-      <img src="{{ '/images/p2.png'  | relative_url }}">
-      <img src="{{ '/images/p3.png'  | relative_url }}">
-      <img src="{{ '/images/p4.png'  | relative_url }}">
-      <img src="{{ '/images/p5.png'  | relative_url }}">
-      <img src="{{ '/images/p6.PNG'  | relative_url }}">
-      <img src="{{ '/images/p7.PNG'  | relative_url }}">
+     <img src="images/p1.png" width="100%" />
+     <img src="images/p2.1.PNG" width="100%" />
+     <img src="images/p2.png" width="100%" />
+     <img src="images/p3.png" width="100%" />
+     <img src="images/p4.png" width="100%" />
+     <img src="images/p5.png" width="100%" />
+     <img src="images/p6.png" width="100%" />
+     <img src="images/p7.png" width="100%" />
+     <img src="images/p8.png" width="100%" />
+     <img src="images/p9.png" width="100%" />
+     <img src="images/p10.png" width="100%" />
+     <img src="images/p11.png" width="100%" />
+     <img src="images/p12.png" width="100%" />
+     <img src="images/p13.1.PNG" width="100%" />
+     <img src="images/p13.png" width="100%" />
+     <img src="images/p14.png" width="100%" />
+     <img src="images/p15.png" width="100%" />
+     <img src="images/p16.png" width="100%" />
     </div>
     <div class="project-text">
       <h3>Project 2: Tropical Cyclone Vulnerability Assessment of the Eastern Coast of Bangladesh</h3>
