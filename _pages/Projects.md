@@ -8,7 +8,7 @@
 
 - Translation speed showed a moderate negative correlation (r = –0.41), meaning slower cyclones drive greater chlorophyll blooms.
 
-- Exceptional cases (like Hikaa and Luban) suggest other environmental or data-related factors also play roles.
+- Exceptional cases (like Hikaa and Luban) suggest that other environmental or data-related factors also play roles.
 
 <div style="max-width:600px; margin:auto;">
   <div id="carousel1" class="carousel" style="overflow:hidden; position:relative;">
@@ -28,7 +28,7 @@
 **Key Points:** 
 - Vulnerability mapping used 11 spatial criteria, covering elevation, slope, land use, population density, literacy, and access to shelters/roads.
 
-- About 32% of the study area was found to be at very high risk, especially in Mirsharai, Sandwip, Sitakunda, and Kutubdia.
+- Approximately 32% of the study area was identified as being at very high risk, particularly in Mirsharai, Sandwip, Sitakunda, and Kutubdia.
 
 - Social vulnerability is highest where population density is high and literacy is low, compounding risks for women and disabled populations.
 
