@@ -63,7 +63,7 @@ author_profile: true
       </p>
       <ul>
         <li>Vulnerability mapping used 11 spatial criteria, covering elevation, slope, land use, population density, literacy, and access to shelters/roads.</li>
-        <li>About 32% of the study area was found to be at very high risk, especially in Mirsharai, Sandwip, Sitakunda, and Kutubdia.</li>
+        <li>Approximately 32% of the study area was identified as being at very high risk, particularly in Mirsharai, Sandwip, Sitakunda, and Kutubdia.</li>
         <li>Social vulnerability is highest where population density is high and literacy is low, compounding risks for women and disabled populations.</li>
         <li>Mitigation capacity (shelters, healthcare, road networks) reduces risk in some regions, but gaps remain that require urgent infrastructure and community interventions.</li>
       </ul>
