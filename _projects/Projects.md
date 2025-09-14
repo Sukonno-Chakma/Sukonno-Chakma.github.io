@@ -45,7 +45,7 @@ author_profile: true
       <img src="{{ '/images/p8.png' | relative_url }}">
       <img src="{{ '/images/p9.png' | relative_url }}">
       <img src="{{ '/images/p10.png' | relative_url }}">
-      <img src="{{ '/images/p11.png' | relative_url }}">
+      <img src="{{ '/images/p11.PNG' | relative_url }}">
       <img src="{{ '/images/p12.png' | relative_url }}">
       <img src="{{ '/images/p13.1.PNG' | relative_url }}">
       <img src="{{ '/images/p13.png' | relative_url }}">
