@@ -20,7 +20,7 @@ author_profile: true
     </div>
     <div class="project-text">
       <h3>Project 1 (Group): Inspection of short-term Chlorophyll Change in the Arabian Sea</h3>
-      <p><strong>Type:</strong> Remote Sensing & Oceanography Lab | 2022</p>
+      <p><strong>Type:</strong> Remote Sensing & Oceanography Lab | 2023</p>
       <p><strong>Authors:</strong> Sukonno Chakma, Md. Emrul Hasan, Nahia Mantaka Chowdhury, Md. Rashed-Ul-Alam, Raida Kadir.</p>
       <ul>
         <li>Nine out of ten cyclones showed increased chlorophyll concentration, with pre-monsoon cyclones producing stronger enhancements.</li>
