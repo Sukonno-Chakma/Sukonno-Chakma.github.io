@@ -18,6 +18,6 @@ I began learning coding in mid-2024, initially as a simple hobby and a way to ke
 
 Beyond coding, I also spend a lot of time playing video games—especially Open world games and MMORPGs (massively multiplayer online role-playing games)—where I get to meet a lot people and intereact with them.
 
-Here are some experimental hobby websites I created based on two of my favorite games:
+Here are some experimental hobby websites I created based on two of my favorite games (Though they are not fully completed):
 
 [Visit Website ↗](https://sukonno-chakma.github.io/Warhammer-Is-Fun/)
