@@ -24,7 +24,7 @@ As the world faces serious environmental challenges, I am motivated to be part o
 - **Bachelor of Science in Oceanography**  
   Shahjalal University of Science & Technology (SUST), Bangladesh  
   *Department of Oceanography*  
-  **Passing Year:** 2024 | **CGPA:** 3.29 / 4.00  
+  **Passing Year:** 2024 | **CGPA:** 3.28 / 4.00  
 
 - **Higher Secondary Certificate (HSC)**  
   Ideal College, Dhanmondi, Dhaka  
