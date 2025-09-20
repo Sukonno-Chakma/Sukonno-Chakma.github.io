@@ -14,10 +14,6 @@ I manage marketing, client outreach, and brand growth while ensuring customer ne
 
 ---
 ### Coding 
-I began learning coding in mid-2024, initially as a simple hobby and a way to keep up with the fast-moving world around me. Although I have not been able to fully immerse myself in it yet, I continue to learn little by little and try to code whenever I have free time.
-
-Beyond coding, I also spend a lot of time playing video games—especially Open world games and MMORPGs (massively multiplayer online role-playing games)—where I get to meet a lot people and intereact with them.
-
-Here are some experimental hobby websites I created based on two of my favorite games (Though they are not fully completed):
+I started learning coding in mid-2024 as a casual hobby and a way to keep pace with today’s fast-moving world. While I’m still learning little by little, I try to code whenever I have free time. Outside of coding, I enjoy playing open-world and MMORPG games. Here are some experimental hobby websites I’ve built around two of my favorite games (with a bit of help from others and AI along the way):
 
 [Visit Website ↗](https://sukonno-chakma.github.io/Warhammer-Is-Fun/)
